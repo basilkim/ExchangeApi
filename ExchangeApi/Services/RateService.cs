@@ -34,7 +34,7 @@ namespace ExchangeApi.Services
                         var exchangeRate = ConvertExchangeRate(result.Rates[baseCur], result.Rates[destCur]);
                         return exchangeRate;
                     }
-                    throw new Exception("unable to retrieve rate");
+                    throw new Exception(result.Error != null && !string.IsNullOrEmpty(result.Error.Type) ? result.Error.Type : "unable to retrieve rate");
                 }
             }
         }

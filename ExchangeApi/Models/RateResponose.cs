@@ -22,5 +22,18 @@ namespace ExchangeApi.Models
 
         [JsonProperty(PropertyName = "rates")]
         public Dictionary<string, decimal> Rates { get; set; }
+
+        [JsonProperty(PropertyName = "error")]
+        public RateError Error { get; set; }
+    }
+
+    public class RateError
+    {
+        [JsonProperty(PropertyName = "code")]
+        public int Code { get; set; }
+
+        [JsonProperty(PropertyName = "type")]
+        public string Type { get; set; }
+
     }
 }
