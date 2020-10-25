@@ -1,7 +1,5 @@
 ﻿using NUnit.Framework;
-using Moq;
 using ExchangeApi.Services;
-using ExchangeApi.Models;
 using System;
 
 namespace ExchangeApi.Test

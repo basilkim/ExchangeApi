@@ -10,13 +10,13 @@ namespace ExchangeApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class InfoController : ControllerBase
     {
         // GET: api/<ValuesController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "URL: /api/calculateinvoice/ExchangeRateDate/InvoiceCurrency/PreTaxAmount/PaymentCurrency", "Ex: https://localhost:44332/api/calculateinvoice/2020-08-05/CAD/123.45/USD" };
+            return new string[] { "URL: /api/calculateinvoice/{invoice date}/{invoice currency}/{pretax amount}/{payment currency}", "Ex: https://localhost:44332/api/calculateinvoice/2020-08-05/CAD/123.45/USD" };
         }
     }
 }

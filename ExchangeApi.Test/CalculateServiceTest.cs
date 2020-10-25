@@ -8,7 +8,7 @@ namespace ExchangeApi.Test
     public class CalculateServiceTest
     {
         private Mock<IRateService> rateServiceMock;
-        private DataFormatService dataFormatService;
+        private IDataFormatService dataFormatService;
         [SetUp]
         public void Setup()
         {
